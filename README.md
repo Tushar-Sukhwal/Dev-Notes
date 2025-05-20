@@ -1,18 +1,67 @@
-# Quartz v4
+# Tushar's Dev Notes
 
-> “[One] who works with the door open gets all kinds of interruptions, but [they] also occasionally gets clues as to what the world is and what might be important.” — Richard Hamming
+![Version](https://img.shields.io/badge/Quartz-v4.5.0-blue)
+![License](https://img.shields.io/badge/License-MIT-green)
 
-Quartz is a set of tools that helps you publish your [digital garden](https://jzhao.xyz/posts/networked-thought) and notes as a website for free.
-Quartz v4 features a from-the-ground rewrite focusing on end-user extensibility and ease-of-use.
+## 📝 Overview
 
-🔗 Read the documentation and get started: https://quartz.jzhao.xyz/
+A comprehensive collection of development notes and guides maintained by Tushar Sukhwal. This digital garden serves as both personal reference and public resource for developers, featuring practical guides on:
 
-[Join the Discord Community](https://discord.gg/cRFFHYye7t)
+- Basic system commands
+- Docker operations
+- Node.js server setup
+- Competitive programming templates
+- And more...
 
-## Sponsors
+## 🚀 Features
 
-<p align="center">
-  <a href="https://github.com/sponsors/jackyzha0">
-    <img src="https://cdn.jsdelivr.net/gh/jackyzha0/jackyzha0/sponsorkit/sponsors.svg" />
-  </a>
-</p>
+- 🔍 Full-text search
+- 🌙 Dark/light mode
+- 📱 Responsive design
+- 🔗 Interactive knowledge graph
+- 📊 Automatic table of contents
+- 🧩 Tag-based organization
+
+## 🛠️ Tech Stack
+
+This digital garden is built with [Quartz v4](https://quartz.jzhao.xyz/), a powerful static site generator optimized for personal knowledge bases and digital gardens.
+
+- **Framework**: Preact
+- **Content**: Markdown with Obsidian compatibility
+- **Styling**: Custom theme with responsive design
+
+## 📖 Content Structure
+
+All notes are stored in the `content/` directory and written in Markdown format, compatible with Obsidian and other note-taking applications.
+
+## 🔧 Local Development
+
+To run this project locally:
+
+```bash
+# Install dependencies
+npm install
+
+# Start the development server
+npm run quartz
+
+# Build for production
+npm run quartz build
+```
+
+## 📈 Contributing
+
+While this is primarily a personal knowledge base, suggestions and corrections are welcome. Feel free to open an issue or submit a pull request.
+
+## 📄 License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## 🔗 Links
+
+- [Portfolio](https://tusharsukhwal.com/)
+- [GitHub](https://github.com/Tushar-Sukhwal)
+
+---
+
+⭐ Star this repository if you find it useful! 
