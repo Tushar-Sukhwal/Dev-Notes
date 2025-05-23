@@ -1,3 +1,4 @@
+checkout 
 ###  Redis
 1. start redis in detached mode. 
 ```shell
