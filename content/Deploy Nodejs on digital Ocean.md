@@ -4,7 +4,7 @@ ssh-keygen
 ```
 - change the name of the key if you want like id_ad908409328_digitalocean
 2. copy the public key and paste in the digital ocean (the key can be found where you created the private key with a .pub extension)
-3. Create new user
+3. Create new user [[Creating new user]]
 ```bash
 adduser username
 ```
@@ -41,7 +41,6 @@ pm2 start entry_file
 >```bash
 > pm2 startup ubuntu 
 
-```
 11. Now your api is live on `droplet_id:port`. 
 
 --- 
