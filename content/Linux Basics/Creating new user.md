@@ -24,8 +24,7 @@ sudo -i
 >who 
 ># See who is logged in with more details 
 >w
->```
-
+>``` 
 
 
 

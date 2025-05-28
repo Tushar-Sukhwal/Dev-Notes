@@ -62,6 +62,10 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 - [Portfolio](https://tusharsukhwal.com/)
 - [GitHub](https://github.com/Tushar-Sukhwal)
 
+## To Direclty run locally 
+```bash
+npx quartz build --serve --port 3000
+```
 ---
 
 ⭐ Star this repository if you find it useful! 

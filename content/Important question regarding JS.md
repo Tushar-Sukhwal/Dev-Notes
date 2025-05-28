@@ -1,0 +1,1 @@
+1. How does JS handles asynchronous process? 
