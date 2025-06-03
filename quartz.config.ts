@@ -16,7 +16,7 @@ const config: QuartzConfig = {
       provider: "plausible",
     },
     locale: "en-US",
-    baseUrl: "quartz.jzhao.xyz",
+    baseUrl: "notes.tusharsukhwal.com",
     ignorePatterns: ["private", "templates", ".obsidian"],
     defaultDateType: "modified",
     theme: {
@@ -83,13 +83,19 @@ const config: QuartzConfig = {
       Plugin.ContentIndex({
         enableSiteMap: true,
         enableRSS: true,
+        rssLimit: 20,
+        rssFullHtml: true,
+        includeEmptyFiles: false,
       }),
       Plugin.Assets(),
       Plugin.Static(),
       Plugin.Favicon(),
       Plugin.NotFoundPage(),
-      // Comment out CustomOgImages to speed up build time
-      Plugin.CustomOgImages(),
+      Plugin.CustomOgImages({
+        colorScheme: "lightMode",
+        width: 1200,
+        height: 630,
+      }),
     ],
   },
 }

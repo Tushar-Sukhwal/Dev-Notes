@@ -21,6 +21,7 @@ Wherever you want! Search for a topic, click on random notes, explore the graph 
 - [[OOPS Basics]]
 - [[WebHooks]]
 - [[TurboRepo]]
+- [[SEO-Optimization-Implementation]]
 ## Some Blogs/Articles I wrote
 - [How to Build an SMS Notification Listener in React Native: Complete Step-by-Step Guide](https://medium.com/@tushars7740/1c339905a329)
 - 

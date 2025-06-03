@@ -252,21 +252,19 @@ export function renderPage(
                 </div>
               </div>
               <Content {...componentData} />
-              <hr />
-              <div class="page-footer">
-                {afterBody.map((BodyComponent) => (
-                  <BodyComponent {...componentData} />
-                ))}
-              </div>
             </div>
             {RightComponent}
-            <Footer {...componentData} />
           </Body>
+          <Footer {...componentData} />
         </div>
+        {pageResources.js
+          .filter((resource) => resource.loadTime === "afterDOMReady")
+          .map((res) => JSResourceToScriptElement(res, true))}
+        <div class="popover-container"></div>
+        {afterBody.map((BodyComponent) => (
+          <BodyComponent {...componentData} />
+        ))}
       </body>
-      {pageResources.js
-        .filter((resource) => resource.loadTime === "afterDOMReady")
-        .map((res) => JSResourceToScriptElement(res))}
     </html>
   )
 
