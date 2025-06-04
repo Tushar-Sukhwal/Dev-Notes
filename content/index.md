@@ -22,6 +22,13 @@ Wherever you want! Search for a topic, click on random notes, explore the graph 
 - [[WebHooks]]
 - [[TurboRepo]]
 - [[SEO-Optimization-Implementation]]
+---
+## Tools that help you get better (at coding)
+
+1. [[Tmux]]
+
+---
 ## Some Blogs/Articles I wrote
+
 - [How to Build an SMS Notification Listener in React Native: Complete Step-by-Step Guide](https://medium.com/@tushars7740/1c339905a329)
 - 

@@ -41,14 +41,51 @@ const defaultOptions: Options = {
 
 function generateSiteMap(cfg: GlobalConfiguration, idx: ContentIndexMap): string {
   const base = cfg.baseUrl ?? ""
-  const createURLEntry = (slug: SimpleSlug, content: ContentDetails): string => `<url>
+  const createURLEntry = (slug: SimpleSlug, content: ContentDetails): string => {
+    // Determine priority based on content type and depth
+    let priority = "0.5"
+    if (slug === "index") {
+      priority = "1.0"
+    } else if (slug.startsWith("tags/")) {
+      priority = "0.6"
+    } else if (slug.split("/").length === 1) {
+      priority = "0.8" // Top-level pages
+    } else if (slug.split("/").length === 2) {
+      priority = "0.7" // Second-level pages
+    }
+
+    // Determine change frequency based on content type
+    let changefreq = "monthly"
+    if (slug === "index") {
+      changefreq = "weekly"
+    } else if (slug.startsWith("tags/")) {
+      changefreq = "weekly"
+    } else if (content.tags.includes("blog") || content.tags.includes("notes")) {
+      changefreq = "monthly"
+    }
+
+    // Calculate days since last modification for dynamic priority adjustment
+    if (content.date) {
+      const daysSinceModified = (Date.now() - content.date.getTime()) / (1000 * 60 * 60 * 24)
+      if (daysSinceModified < 30) {
+        priority = Math.min(parseFloat(priority) + 0.1, 1.0).toString()
+      }
+    }
+
+    return `<url>
     <loc>https://${joinSegments(base, encodeURI(slug))}</loc>
-    ${content.date && `<lastmod>${content.date.toISOString()}</lastmod>`}
+    ${content.date ? `<lastmod>${content.date.toISOString()}</lastmod>` : ""}
+    <changefreq>${changefreq}</changefreq>
+    <priority>${priority}</priority>
   </url>`
+  }
+
   const urls = Array.from(idx)
     .map(([slug, content]) => createURLEntry(simplifySlug(slug), content))
     .join("")
-  return `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">${urls}</urlset>`
+
+  return `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">${urls}</urlset>`
 }
 
 function generateRSSFeed(cfg: GlobalConfiguration, idx: ContentIndexMap, limit?: number): string {

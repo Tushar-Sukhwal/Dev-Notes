@@ -79,6 +79,9 @@ export default (() => {
         {/* Canonical URL */}
         <link rel="canonical" href={canonicalUrl} />
 
+        {/* AMP HTML link */}
+        <link rel="amphtml" href={`${canonicalUrl}/amp`} />
+
         {/* Basic SEO meta tags */}
         <meta name="description" content={description} />
         <meta name="author" content={cfg.pageTitle.replace("'s Notes", "").replace(" Notes", "")} />

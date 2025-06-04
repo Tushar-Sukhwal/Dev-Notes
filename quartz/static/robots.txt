@@ -1,13 +1,45 @@
 User-agent: *
 Allow: /
+Allow: /static/
+Allow: /tags/
+Allow: /*/amp
 
 # Block access to private directories
 Disallow: /private/
 Disallow: /.obsidian/
 Disallow: /templates/
+Disallow: /*?*
+Disallow: /search.json
+Disallow: /contentIndex.json
 
-# Sitemap location
+# Special rules for common bots
+User-agent: Googlebot
+Allow: /
+Allow: /static/
+Allow: /tags/
+Allow: /*/amp
+Crawl-delay: 1
+
+User-agent: Bingbot
+Allow: /
+Allow: /static/
+Allow: /tags/
+Allow: /*/amp
+Crawl-delay: 2
+
+# Block aggressive crawlers
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+# Sitemap locations
 Sitemap: https://notes.tusharsukhwal.com/sitemap.xml
+Sitemap: https://notes.tusharsukhwal.com/index.xml
 
 # Crawl delay (optional - adjust as needed)
 Crawl-delay: 1 
