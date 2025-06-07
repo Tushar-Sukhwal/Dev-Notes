@@ -23,13 +23,13 @@ su - username
 ```bash
 sudo apt install git-all
 ```
-7. clone your github repo 
+7. clone your github repo (for private repos on AWS EC2, see [[Clone a Private Repo ( for EC2 or digitalOcean or any other VM)]])
 8. install the dependencies by `npm i ` and copy your env variables. 
 9. install a process manager to run the app. 
 ```shell 
 npm i pm2@latest -g
 ```
-10. start your app using pm2 
+10. start your app using [[pm2]] 
 ```shell 
 pm2 start entry_file
 #example pm2 start index.js

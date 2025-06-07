@@ -1,7 +1,6 @@
 ---
 title: "SEO Optimization Implementation for Quartz Website"
 description: "Complete documentation of SEO improvements implemented including technical SEO, structured data, meta tags, and content optimization strategies."
-tags: ["seo", "quartz", "web-development", "optimization", "technical-seo"]
 created: 2024-12-19
 ---
 

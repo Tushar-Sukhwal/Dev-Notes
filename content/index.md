@@ -18,10 +18,12 @@ Wherever you want! Search for a topic, click on random notes, explore the graph 
 - [[Competitive programming templates]]
 - [[Linux Basic Commands]]
 - [[Deploy Nodejs on digital Ocean]]
+- [[Clone a Private Repo ( for EC2 or digitalOcean or any other VM)]]
 - [[OOPS Basics]]
 - [[WebHooks]]
 - [[TurboRepo]]
 - [[SEO-Optimization-Implementation]]
+- [[PM2]]
 ---
 ## Tools that help you get better (at coding)
 
@@ -31,4 +33,3 @@ Wherever you want! Search for a topic, click on random notes, explore the graph 
 ## Some Blogs/Articles I wrote
 
 - [How to Build an SMS Notification Listener in React Native: Complete Step-by-Step Guide](https://medium.com/@tushars7740/1c339905a329)
-- 
